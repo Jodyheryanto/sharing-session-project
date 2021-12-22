@@ -11,18 +11,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: yarn install
-      run: |
-        yarn install
-    - name: yarn test
-      run: |
-        yarn test 
-      env:
-        CI: true
-      
-    - name: yarn build
-      run: |
-        yarn run build --if-present
     - name: Deploy heroku stage
       run: |
         echo Ready to deploy to heroku.
